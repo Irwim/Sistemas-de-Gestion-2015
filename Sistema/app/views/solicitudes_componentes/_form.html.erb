@@ -1,0 +1,33 @@
+<%= form_for(@solicitudes_componente) do |f| %>
+  <% if @solicitudes_componente.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@solicitudes_componente.errors.count, "error") %> prohibited this solicitudes_componente from being saved:</h2>
+
+      <ul>
+      <% @solicitudes_componente.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :fecha %><br>
+    <%= f.date_select :fecha %>
+  </div>
+  <div class="field">
+    <%= f.label :numero_de_formulario %><br>
+    <%= f.number_field :numero_de_formulario %>
+  </div>
+  <div class="field">
+    <%= f.label :estado_de_solicitud %><br>
+    <%= f.check_box :estado_de_solicitud %>
+  </div>
+  <div class="field">
+    <%= f.label :baja_de_solicitud %><br>
+    <%= f.date_select :baja_de_solicitud %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

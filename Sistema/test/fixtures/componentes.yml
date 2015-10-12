@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id_componente: 1
+  nombre: MyString
+  descripcion: MyString
+  ppp: MyText
+  cantidad_minima: 1
+  codigo_interno: MyText
+
+two:
+  id_componente: 1
+  nombre: MyString
+  descripcion: MyString
+  ppp: MyText
+  cantidad_minima: 1
+  codigo_interno: MyText

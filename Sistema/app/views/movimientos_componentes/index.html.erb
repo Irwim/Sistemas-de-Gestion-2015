@@ -1,0 +1,27 @@
+<h1>Listing movimientos_componentes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fecha</th>
+      <th>Cantidad transferida</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @movimientos_componentes.each do |movimientos_componente| %>
+      <tr>
+        <td><%= movimientos_componente.fecha %></td>
+        <td><%= movimientos_componente.cantidad_transferida %></td>
+        <td><%= link_to 'Show', movimientos_componente %></td>
+        <td><%= link_to 'Edit', edit_movimientos_componente_path(movimientos_componente) %></td>
+        <td><%= link_to 'Destroy', movimientos_componente, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Movimientos componente', new_movimientos_componente_path %>

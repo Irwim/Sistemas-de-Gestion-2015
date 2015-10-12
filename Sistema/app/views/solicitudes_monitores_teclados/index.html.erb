@@ -1,0 +1,27 @@
+<h1>Listing solicitudes_monitores_teclados</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fecha</th>
+      <th>Numero de formulario</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @solicitudes_monitores_teclados.each do |solicitudes_monitores_teclado| %>
+      <tr>
+        <td><%= solicitudes_monitores_teclado.fecha %></td>
+        <td><%= solicitudes_monitores_teclado.numero_de_formulario %></td>
+        <td><%= link_to 'Show', solicitudes_monitores_teclado %></td>
+        <td><%= link_to 'Edit', edit_solicitudes_monitores_teclado_path(solicitudes_monitores_teclado) %></td>
+        <td><%= link_to 'Destroy', solicitudes_monitores_teclado, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Solicitudes monitores teclado', new_solicitudes_monitores_teclado_path %>

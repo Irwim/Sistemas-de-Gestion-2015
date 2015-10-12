@@ -1,0 +1,27 @@
+<h1>Listing ordenes_de_producciones_detalles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cantidad solicitada</th>
+      <th>Cantidad terminada</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ordenes_de_producciones_detalles.each do |ordenes_de_producciones_detalle| %>
+      <tr>
+        <td><%= ordenes_de_producciones_detalle.cantidad_solicitada %></td>
+        <td><%= ordenes_de_producciones_detalle.cantidad_terminada %></td>
+        <td><%= link_to 'Show', ordenes_de_producciones_detalle %></td>
+        <td><%= link_to 'Edit', edit_ordenes_de_producciones_detalle_path(ordenes_de_producciones_detalle) %></td>
+        <td><%= link_to 'Destroy', ordenes_de_producciones_detalle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ordenes de producciones detalle', new_ordenes_de_producciones_detalle_path %>

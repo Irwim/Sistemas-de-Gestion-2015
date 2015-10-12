@@ -1,0 +1,31 @@
+<h1>Listing solicitudes_componentes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fecha</th>
+      <th>Numero de formulario</th>
+      <th>Estado de solicitud</th>
+      <th>Baja de solicitud</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @solicitudes_componentes.each do |solicitudes_componente| %>
+      <tr>
+        <td><%= solicitudes_componente.fecha %></td>
+        <td><%= solicitudes_componente.numero_de_formulario %></td>
+        <td><%= solicitudes_componente.estado_de_solicitud %></td>
+        <td><%= solicitudes_componente.baja_de_solicitud %></td>
+        <td><%= link_to 'Show', solicitudes_componente %></td>
+        <td><%= link_to 'Edit', edit_solicitudes_componente_path(solicitudes_componente) %></td>
+        <td><%= link_to 'Destroy', solicitudes_componente, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Solicitudes componente', new_solicitudes_componente_path %>

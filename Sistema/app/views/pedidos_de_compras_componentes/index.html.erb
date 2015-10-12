@@ -1,0 +1,31 @@
+<h1>Listing pedidos_de_compras_componentes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fecha</th>
+      <th>Baja de pedido</th>
+      <th>Estado de pedido</th>
+      <th>Numero de formulario</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pedidos_de_compras_componentes.each do |pedidos_de_compras_componente| %>
+      <tr>
+        <td><%= pedidos_de_compras_componente.fecha %></td>
+        <td><%= pedidos_de_compras_componente.baja_de_pedido %></td>
+        <td><%= pedidos_de_compras_componente.estado_de_pedido %></td>
+        <td><%= pedidos_de_compras_componente.numero_de_formulario %></td>
+        <td><%= link_to 'Show', pedidos_de_compras_componente %></td>
+        <td><%= link_to 'Edit', edit_pedidos_de_compras_componente_path(pedidos_de_compras_componente) %></td>
+        <td><%= link_to 'Destroy', pedidos_de_compras_componente, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pedidos de compras componente', new_pedidos_de_compras_componente_path %>

@@ -1,0 +1,27 @@
+<h1>Listing categorias_productos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Descripcion</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @categorias_productos.each do |categorias_producto| %>
+      <tr>
+        <td><%= categorias_producto.nombre %></td>
+        <td><%= categorias_producto.descripcion %></td>
+        <td><%= link_to 'Show', categorias_producto %></td>
+        <td><%= link_to 'Edit', edit_categorias_producto_path(categorias_producto) %></td>
+        <td><%= link_to 'Destroy', categorias_producto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Categorias producto', new_categorias_producto_path %>

@@ -1,0 +1,25 @@
+<h1>Listing stocks_componentes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cantidad disponible</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @stocks_componentes.each do |stocks_componente| %>
+      <tr>
+        <td><%= stocks_componente.cantidad_disponible %></td>
+        <td><%= link_to 'Show', stocks_componente %></td>
+        <td><%= link_to 'Edit', edit_stocks_componente_path(stocks_componente) %></td>
+        <td><%= link_to 'Destroy', stocks_componente, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Stocks componente', new_stocks_componente_path %>

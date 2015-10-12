@@ -1,0 +1,21 @@
+<%= form_for(@traslado_detalle) do |f| %>
+  <% if @traslado_detalle.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@traslado_detalle.errors.count, "error") %> prohibited this traslado_detalle from being saved:</h2>
+
+      <ul>
+      <% @traslado_detalle.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :cantidad_terminada %><br>
+    <%= f.number_field :cantidad_terminada %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

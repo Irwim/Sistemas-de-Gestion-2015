@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @categorias_componente.nombre %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @categorias_componente.descripcion %>
+</p>
+
+<%= link_to 'Edit', edit_categorias_componente_path(@categorias_componente) %> |
+<%= link_to 'Back', categorias_componentes_path %>

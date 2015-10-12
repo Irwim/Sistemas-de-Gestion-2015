@@ -1,0 +1,2 @@
+module MovimientosComponentesHelper
+end

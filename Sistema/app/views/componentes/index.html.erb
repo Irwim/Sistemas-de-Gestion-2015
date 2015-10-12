@@ -1,0 +1,39 @@
+<h3  class = "centrar">Lista de componentes</h3>
+<%= link_to 'Nuevo Componente', new_componente_path %>
+
+<div class="box">
+<div class="box-body">
+
+<table  id="example1" class="table table-bordered table-striped">
+  <thead>
+    <tr>
+
+      <th class = "centrar">Nombre</th>
+      <th class = "centrar">Precio</th>
+      <th class = "centrar">Despcripcion</th>
+      <th class = "centrar">Cantidad minima</th>
+      <th class = "centrar">Codigo interno</th>
+      <th class = "centrar", colspan="3">Opciones</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @componentes.each do |componente| %>
+      <tr>          
+        <td><%= componente.nombre %></td>
+        <td><%= componente.ppp %></td>
+        <td><%= componente.descripcion %></td>
+        <td><%= componente.cantidad_minima %></td>
+        <td><%= componente.codigo_interno %></td>
+        <td> <%= link_to image_tag("ver.png"), componente  %> </td>
+        <td> <%= link_to image_tag("edit.png"), edit_componente_path(componente)  %> </td>
+      <td> <%= link_to image_tag("delete.png"), componente, method: :delete , data: { confirm: 'Estas seguro?'} %> </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+</div>
+<br>
+
+

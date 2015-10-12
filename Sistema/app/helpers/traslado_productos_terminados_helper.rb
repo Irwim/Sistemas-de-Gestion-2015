@@ -1,0 +1,2 @@
+module TrasladoProductosTerminadosHelper
+end

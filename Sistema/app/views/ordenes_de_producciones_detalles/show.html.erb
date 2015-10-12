@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cantidad solicitada:</strong>
+  <%= @ordenes_de_producciones_detalle.cantidad_solicitada %>
+</p>
+
+<p>
+  <strong>Cantidad terminada:</strong>
+  <%= @ordenes_de_producciones_detalle.cantidad_terminada %>
+</p>
+
+<%= link_to 'Edit', edit_ordenes_de_producciones_detalle_path(@ordenes_de_producciones_detalle) %> |
+<%= link_to 'Back', ordenes_de_producciones_detalles_path %>

@@ -1,0 +1,25 @@
+<%= form_for(@formularios_cpus_producidas_detalle) do |f| %>
+  <% if @formularios_cpus_producidas_detalle.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@formularios_cpus_producidas_detalle.errors.count, "error") %> prohibited this formularios_cpus_producidas_detalle from being saved:</h2>
+
+      <ul>
+      <% @formularios_cpus_producidas_detalle.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :cantidad_solicitada %><br>
+    <%= f.number_field :cantidad_solicitada %>
+  </div>
+  <div class="field">
+    <%= f.label :cantidad_terminada %><br>
+    <%= f.number_field :cantidad_terminada %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

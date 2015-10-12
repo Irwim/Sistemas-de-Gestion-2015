@@ -1,0 +1,27 @@
+<h1>Listing formularios_cpus_producidas_detalles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cantidad solicitada</th>
+      <th>Cantidad terminada</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @formularios_cpus_producidas_detalles.each do |formularios_cpus_producidas_detalle| %>
+      <tr>
+        <td><%= formularios_cpus_producidas_detalle.cantidad_solicitada %></td>
+        <td><%= formularios_cpus_producidas_detalle.cantidad_terminada %></td>
+        <td><%= link_to 'Show', formularios_cpus_producidas_detalle %></td>
+        <td><%= link_to 'Edit', edit_formularios_cpus_producidas_detalle_path(formularios_cpus_producidas_detalle) %></td>
+        <td><%= link_to 'Destroy', formularios_cpus_producidas_detalle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Formularios cpus producidas detalle', new_formularios_cpus_producidas_detalle_path %>

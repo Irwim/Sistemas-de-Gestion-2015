@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @productos_terminado.nombre %>
+</p>
+
+<p>
+  <strong>Codigo:</strong>
+  <%= @productos_terminado.codigo %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @productos_terminado.descripcion %>
+</p>
+
+<p>
+  <strong>Cantidad minima:</strong>
+  <%= @productos_terminado.cantidad_minima %>
+</p>
+
+<%= link_to 'Edit', edit_productos_terminado_path(@productos_terminado) %> |
+<%= link_to 'Back', productos_terminados_path %>

@@ -1,0 +1,25 @@
+<%= form_for(@movimientos_componente) do |f| %>
+  <% if @movimientos_componente.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@movimientos_componente.errors.count, "error") %> prohibited this movimientos_componente from being saved:</h2>
+
+      <ul>
+      <% @movimientos_componente.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :fecha %><br>
+    <%= f.date_select :fecha %>
+  </div>
+  <div class="field">
+    <%= f.label :cantidad_transferida %><br>
+    <%= f.number_field :cantidad_transferida %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

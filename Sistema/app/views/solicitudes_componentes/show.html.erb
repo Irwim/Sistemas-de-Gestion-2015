@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @solicitudes_componente.fecha %>
+</p>
+
+<p>
+  <strong>Numero de formulario:</strong>
+  <%= @solicitudes_componente.numero_de_formulario %>
+</p>
+
+<p>
+  <strong>Estado de solicitud:</strong>
+  <%= @solicitudes_componente.estado_de_solicitud %>
+</p>
+
+<p>
+  <strong>Baja de solicitud:</strong>
+  <%= @solicitudes_componente.baja_de_solicitud %>
+</p>
+
+<%= link_to 'Edit', edit_solicitudes_componente_path(@solicitudes_componente) %> |
+<%= link_to 'Back', solicitudes_componentes_path %>

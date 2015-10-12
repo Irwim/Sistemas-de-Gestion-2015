@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cantidad solicitada:</strong>
+  <%= @solicitudes_componentes_detalle.cantidad_solicitada %>
+</p>
+
+<p>
+  <strong>Cantidad entregada:</strong>
+  <%= @solicitudes_componentes_detalle.cantidad_entregada %>
+</p>
+
+<%= link_to 'Edit', edit_solicitudes_componentes_detalle_path(@solicitudes_componentes_detalle) %> |
+<%= link_to 'Back', solicitudes_componentes_detalles_path %>

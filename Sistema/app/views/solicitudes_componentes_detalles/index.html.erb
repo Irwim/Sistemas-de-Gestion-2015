@@ -1,0 +1,27 @@
+<h1>Listing solicitudes_componentes_detalles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cantidad solicitada</th>
+      <th>Cantidad entregada</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @solicitudes_componentes_detalles.each do |solicitudes_componentes_detalle| %>
+      <tr>
+        <td><%= solicitudes_componentes_detalle.cantidad_solicitada %></td>
+        <td><%= solicitudes_componentes_detalle.cantidad_entregada %></td>
+        <td><%= link_to 'Show', solicitudes_componentes_detalle %></td>
+        <td><%= link_to 'Edit', edit_solicitudes_componentes_detalle_path(solicitudes_componentes_detalle) %></td>
+        <td><%= link_to 'Destroy', solicitudes_componentes_detalle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Solicitudes componentes detalle', new_solicitudes_componentes_detalle_path %>

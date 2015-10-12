@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fecha: 2015-10-11
+  baja_de_pedido: 2015-10-11
+  estado_de_pedido: false
+  numero_de_formulario: 1
+
+two:
+  fecha: 2015-10-11
+  baja_de_pedido: 2015-10-11
+  estado_de_pedido: false
+  numero_de_formulario: 1

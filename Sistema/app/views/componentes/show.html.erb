@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id componente:</strong>
+  <%= @componente.id_componente %>
+
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @componente.nombre %>
+  
+</p>
+
+<p>
+  <strong>Ppp:</strong>
+  <%= @componente.ppp %>
+</p>
+
+ <p>
+  <strong>descripcion:</strong>
+  <%= @componente.descripcion %>
+</p>
+
+<p>
+  <strong>Cantidad minima:</strong>
+  <%= @componente.cantidad_minima %>
+</p>
+
+<p>
+  <strong>Codigo interno:</strong>
+  <%= @componente.codigo_interno %>
+</p>
+
+<%= link_to 'Editar', edit_componente_path(@componente) %> |
+<%= link_to 'Atras', componentes_path %>

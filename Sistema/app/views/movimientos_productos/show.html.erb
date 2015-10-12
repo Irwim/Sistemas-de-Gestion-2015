@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @movimientos_producto.fecha %>
+</p>
+
+<p>
+  <strong>Cantidad transferida:</strong>
+  <%= @movimientos_producto.cantidad_transferida %>
+</p>
+
+<%= link_to 'Edit', edit_movimientos_producto_path(@movimientos_producto) %> |
+<%= link_to 'Back', movimientos_productos_path %>

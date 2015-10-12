@@ -1,0 +1,27 @@
+<h1>Listing categorias_componentes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Descripcion</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @categorias_componentes.each do |categorias_componente| %>
+      <tr>
+        <td><%= categorias_componente.nombre %></td>
+        <td><%= categorias_componente.descripcion %></td>
+        <td><%= link_to 'Show', categorias_componente %></td>
+        <td><%= link_to 'Edit', edit_categorias_componente_path(categorias_componente) %></td>
+        <td><%= link_to 'Destroy', categorias_componente, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Categorias componente', new_categorias_componente_path %>

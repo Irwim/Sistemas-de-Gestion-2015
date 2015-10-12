@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cantidad disponible:</strong>
+  <%= @stocks_productos_terminado.cantidad_disponible %>
+</p>
+
+<%= link_to 'Edit', edit_stocks_productos_terminado_path(@stocks_productos_terminado) %> |
+<%= link_to 'Back', stocks_productos_terminados_path %>

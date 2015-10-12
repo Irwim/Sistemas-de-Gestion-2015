@@ -1,0 +1,2 @@
+module CategoriasComponentesHelper
+end

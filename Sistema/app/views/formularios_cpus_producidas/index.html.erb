@@ -1,0 +1,27 @@
+<h1>Listing formularios_cpus_producidas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Orden</th>
+      <th>Numero de formulario</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @formularios_cpus_producidas.each do |formularios_cpus_producida| %>
+      <tr>
+        <td><%= formularios_cpus_producida.orden %></td>
+        <td><%= formularios_cpus_producida.numero_de_formulario %></td>
+        <td><%= link_to 'Show', formularios_cpus_producida %></td>
+        <td><%= link_to 'Edit', edit_formularios_cpus_producida_path(formularios_cpus_producida) %></td>
+        <td><%= link_to 'Destroy', formularios_cpus_producida, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Formularios cpus producida', new_formularios_cpus_producida_path %>

@@ -1,0 +1,2 @@
+module SolicitudesMonitoresTecladosHelper
+end

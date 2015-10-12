@@ -1,0 +1,2 @@
+module OrdenesDeProduccionesDetallesHelper
+end
