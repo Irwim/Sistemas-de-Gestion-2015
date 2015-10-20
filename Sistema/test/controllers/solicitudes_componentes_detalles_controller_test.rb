@@ -2,7 +2,7 @@ require 'test_helper'
 
 class SolicitudesComponentesDetallesControllerTest < ActionController::TestCase
   setup do
-    @solicitudes_componentes_detalle = solicitudes_componentes_detalles(:one)
+    @solicitud_componente_detalle = solicitudes_componentes_detalles(:one)
   end
 
   test "should get index" do
@@ -16,32 +16,32 @@ class SolicitudesComponentesDetallesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should create solicitudes_componentes_detalle" do
-    assert_difference('SolicitudesComponentesDetalle.count') do
-      post :create, solicitudes_componentes_detalle: { cantidad_entregada: @solicitudes_componentes_detalle.cantidad_entregada, cantidad_solicitada: @solicitudes_componentes_detalle.cantidad_solicitada }
+  test "should create solicitud_componente_detalle" do
+    assert_difference('SolicitudComponenteDetalle.count') do
+      post :create, solicitud_componente_detalle: { cantidad_entregada: @solicitud_componente_detalle.cantidad_entregada, cantidad_solicitada: @solicitud_componente_detalle.cantidad_solicitada, componente_id: @solicitud_componente_detalle.componente_id, solicitud_componente_id: @solicitud_componente_detalle.solicitud_componente_id }
     end
 
-    assert_redirected_to solicitudes_componentes_detalle_path(assigns(:solicitudes_componentes_detalle))
+    assert_redirected_to solicitud_componente_detalle_path(assigns(:solicitud_componente_detalle))
   end
 
-  test "should show solicitudes_componentes_detalle" do
-    get :show, id: @solicitudes_componentes_detalle
+  test "should show solicitud_componente_detalle" do
+    get :show, id: @solicitud_componente_detalle
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, id: @solicitudes_componentes_detalle
+    get :edit, id: @solicitud_componente_detalle
     assert_response :success
   end
 
-  test "should update solicitudes_componentes_detalle" do
-    patch :update, id: @solicitudes_componentes_detalle, solicitudes_componentes_detalle: { cantidad_entregada: @solicitudes_componentes_detalle.cantidad_entregada, cantidad_solicitada: @solicitudes_componentes_detalle.cantidad_solicitada }
-    assert_redirected_to solicitudes_componentes_detalle_path(assigns(:solicitudes_componentes_detalle))
+  test "should update solicitud_componente_detalle" do
+    patch :update, id: @solicitud_componente_detalle, solicitud_componente_detalle: { cantidad_entregada: @solicitud_componente_detalle.cantidad_entregada, cantidad_solicitada: @solicitud_componente_detalle.cantidad_solicitada, componente_id: @solicitud_componente_detalle.componente_id, solicitud_componente_id: @solicitud_componente_detalle.solicitud_componente_id }
+    assert_redirected_to solicitud_componente_detalle_path(assigns(:solicitud_componente_detalle))
   end
 
-  test "should destroy solicitudes_componentes_detalle" do
-    assert_difference('SolicitudesComponentesDetalle.count', -1) do
-      delete :destroy, id: @solicitudes_componentes_detalle
+  test "should destroy solicitud_componente_detalle" do
+    assert_difference('SolicitudComponenteDetalle.count', -1) do
+      delete :destroy, id: @solicitud_componente_detalle
     end
 
     assert_redirected_to solicitudes_componentes_detalles_path

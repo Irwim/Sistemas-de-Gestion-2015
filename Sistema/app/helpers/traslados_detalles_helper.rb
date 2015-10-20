@@ -1,0 +1,2 @@
+module TrasladosDetallesHelper
+end

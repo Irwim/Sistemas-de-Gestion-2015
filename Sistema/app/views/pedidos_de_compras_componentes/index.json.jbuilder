@@ -1,4 +1,4 @@
-json.array!(@pedidos_de_compras_componentes) do |pedidos_de_compras_componente|
-  json.extract! pedidos_de_compras_componente, :id, :fecha, :baja_de_pedido, :estado_de_pedido, :numero_de_formulario
-  json.url pedidos_de_compras_componente_url(pedidos_de_compras_componente, format: :json)
+json.array!(@pedidos_de_compras_componentes) do |pedido_de_compra_componente|
+  json.extract! pedido_de_compra_componente, :id, :fecha, :baja, :nro_formulario, :estado
+  json.url pedido_de_compra_componente_url(pedido_de_compra_componente, format: :json)
 end

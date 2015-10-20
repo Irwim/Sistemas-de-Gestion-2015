@@ -1,0 +1,29 @@
+<h1>Listing pedidos_componentes_detalles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pedido de compra componente</th>
+      <th>Componente</th>
+      <th>Cantidad solicitada</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pedidos_componentes_detalles.each do |pedido_componente_detalle| %>
+      <tr>
+        <td><%= pedido_componente_detalle.pedido_de_compra_componente %></td>
+        <td><%= pedido_componente_detalle.componente %></td>
+        <td><%= pedido_componente_detalle.cantidad_solicitada %></td>
+        <td><%= link_to 'Show', pedido_componente_detalle %></td>
+        <td><%= link_to 'Edit', edit_pedido_componente_detalle_path(pedido_componente_detalle) %></td>
+        <td><%= link_to 'Destroy', pedido_componente_detalle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pedido componente detalle', new_pedido_componente_detalle_path %>

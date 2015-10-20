@@ -1,1 +1,1 @@
-json.extract! @stocks_productos_terminado, :id, :cantidad_disponible, :created_at, :updated_at
+json.extract! @stock_producto_terminado, :id, :deposito_id, :producto_terminado_id, :cantidad_disponible, :created_at, :updated_at

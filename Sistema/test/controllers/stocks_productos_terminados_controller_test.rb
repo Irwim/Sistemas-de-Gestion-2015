@@ -2,7 +2,7 @@ require 'test_helper'
 
 class StocksProductosTerminadosControllerTest < ActionController::TestCase
   setup do
-    @stocks_productos_terminado = stocks_productos_terminados(:one)
+    @stock_producto_terminado = stocks_productos_terminados(:one)
   end
 
   test "should get index" do
@@ -16,32 +16,32 @@ class StocksProductosTerminadosControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should create stocks_productos_terminado" do
-    assert_difference('StocksProductosTerminado.count') do
-      post :create, stocks_productos_terminado: { cantidad_disponible: @stocks_productos_terminado.cantidad_disponible }
+  test "should create stock_producto_terminado" do
+    assert_difference('StockProductoTerminado.count') do
+      post :create, stock_producto_terminado: { cantidad_disponible: @stock_producto_terminado.cantidad_disponible, deposito_id: @stock_producto_terminado.deposito_id, producto_terminado_id: @stock_producto_terminado.producto_terminado_id }
     end
 
-    assert_redirected_to stocks_productos_terminado_path(assigns(:stocks_productos_terminado))
+    assert_redirected_to stock_producto_terminado_path(assigns(:stock_producto_terminado))
   end
 
-  test "should show stocks_productos_terminado" do
-    get :show, id: @stocks_productos_terminado
+  test "should show stock_producto_terminado" do
+    get :show, id: @stock_producto_terminado
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, id: @stocks_productos_terminado
+    get :edit, id: @stock_producto_terminado
     assert_response :success
   end
 
-  test "should update stocks_productos_terminado" do
-    patch :update, id: @stocks_productos_terminado, stocks_productos_terminado: { cantidad_disponible: @stocks_productos_terminado.cantidad_disponible }
-    assert_redirected_to stocks_productos_terminado_path(assigns(:stocks_productos_terminado))
+  test "should update stock_producto_terminado" do
+    patch :update, id: @stock_producto_terminado, stock_producto_terminado: { cantidad_disponible: @stock_producto_terminado.cantidad_disponible, deposito_id: @stock_producto_terminado.deposito_id, producto_terminado_id: @stock_producto_terminado.producto_terminado_id }
+    assert_redirected_to stock_producto_terminado_path(assigns(:stock_producto_terminado))
   end
 
-  test "should destroy stocks_productos_terminado" do
-    assert_difference('StocksProductosTerminado.count', -1) do
-      delete :destroy, id: @stocks_productos_terminado
+  test "should destroy stock_producto_terminado" do
+    assert_difference('StockProductoTerminado.count', -1) do
+      delete :destroy, id: @stock_producto_terminado
     end
 
     assert_redirected_to stocks_productos_terminados_path

@@ -12,8 +12,12 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :tipo_de_deposito %><br>
+    <%= f.number_field :tipo_de_deposito %>
+  </div>
+  <div class="field">
     <%= f.label :descripcion %><br>
-    <%= f.text_field :descripcion %>
+    <%= f.text_area :descripcion %>
   </div>
   <div class="actions">
     <%= f.submit %>

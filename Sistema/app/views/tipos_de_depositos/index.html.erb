@@ -9,12 +9,12 @@
   </thead>
 
   <tbody>
-    <% @tipos_de_depositos.each do |tipos_de_deposito| %>
+    <% @tipos_de_depositos.each do |tipo_de_deposito| %>
       <tr>
-        <td><%= tipos_de_deposito.nombre %></td>
-        <td><%= link_to 'Show', tipos_de_deposito %></td>
-        <td><%= link_to 'Edit', edit_tipos_de_deposito_path(tipos_de_deposito) %></td>
-        <td><%= link_to 'Destroy', tipos_de_deposito, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= tipo_de_deposito.nombre %></td>
+        <td><%= link_to 'Show', tipo_de_deposito %></td>
+        <td><%= link_to 'Edit', edit_tipo_de_deposito_path(tipo_de_deposito) %></td>
+        <td><%= link_to 'Destroy', tipo_de_deposito, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -22,4 +22,4 @@
 
 <br>
 
-<%= link_to 'New Tipos de deposito', new_tipos_de_deposito_path %>
+<%= link_to 'New Tipo de deposito', new_tipo_de_deposito_path %>

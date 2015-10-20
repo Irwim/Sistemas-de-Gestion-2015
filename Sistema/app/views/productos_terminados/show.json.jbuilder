@@ -1,1 +1,1 @@
-json.extract! @productos_terminado, :id, :nombre, :codigo, :descripcion, :cantidad_minima, :created_at, :updated_at
+json.extract! @producto_terminado, :id, :modelo_id, :categoria_producto_id, :codigo, :cantidad_minima, :descripcion, :created_at, :updated_at

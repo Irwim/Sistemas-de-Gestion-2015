@@ -10,13 +10,13 @@
   </thead>
 
   <tbody>
-    <% @tipos_de_movimientos.each do |tipos_de_movimiento| %>
+    <% @tipos_de_movimientos.each do |tipo_de_movimiento| %>
       <tr>
-        <td><%= tipos_de_movimiento.nombre %></td>
-        <td><%= tipos_de_movimiento.descripcion %></td>
-        <td><%= link_to 'Show', tipos_de_movimiento %></td>
-        <td><%= link_to 'Edit', edit_tipos_de_movimiento_path(tipos_de_movimiento) %></td>
-        <td><%= link_to 'Destroy', tipos_de_movimiento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= tipo_de_movimiento.nombre %></td>
+        <td><%= tipo_de_movimiento.descripcion %></td>
+        <td><%= link_to 'Show', tipo_de_movimiento %></td>
+        <td><%= link_to 'Edit', edit_tipo_de_movimiento_path(tipo_de_movimiento) %></td>
+        <td><%= link_to 'Destroy', tipo_de_movimiento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +24,4 @@
 
 <br>
 
-<%= link_to 'New Tipos de movimiento', new_tipos_de_movimiento_path %>
+<%= link_to 'New Tipo de movimiento', new_tipo_de_movimiento_path %>

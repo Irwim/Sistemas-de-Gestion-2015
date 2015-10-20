@@ -1,47 +1,47 @@
 class SolicitudesDetallesController < ApplicationController
-  before_action :set_solicitudes_detalle, only: [:show, :edit, :update, :destroy]
+  before_action :set_solicitud_detalle, only: [:show, :edit, :update, :destroy]
 
   respond_to :html
 
   def index
-    @solicitudes_detalles = SolicitudesDetalle.all
+    @solicitudes_detalles = SolicitudDetalle.all
     respond_with(@solicitudes_detalles)
   end
 
   def show
-    respond_with(@solicitudes_detalle)
+    respond_with(@solicitud_detalle)
   end
 
   def new
-    @solicitudes_detalle = SolicitudesDetalle.new
-    respond_with(@solicitudes_detalle)
+    @solicitud_detalle = SolicitudDetalle.new
+    respond_with(@solicitud_detalle)
   end
 
   def edit
   end
 
   def create
-    @solicitudes_detalle = SolicitudesDetalle.new(solicitudes_detalle_params)
-    @solicitudes_detalle.save
-    respond_with(@solicitudes_detalle)
+    @solicitud_detalle = SolicitudDetalle.new(solicitud_detalle_params)
+    @solicitud_detalle.save
+    respond_with(@solicitud_detalle)
   end
 
   def update
-    @solicitudes_detalle.update(solicitudes_detalle_params)
-    respond_with(@solicitudes_detalle)
+    @solicitud_detalle.update(solicitud_detalle_params)
+    respond_with(@solicitud_detalle)
   end
 
   def destroy
-    @solicitudes_detalle.destroy
-    respond_with(@solicitudes_detalle)
+    @solicitud_detalle.destroy
+    respond_with(@solicitud_detalle)
   end
 
   private
-    def set_solicitudes_detalle
-      @solicitudes_detalle = SolicitudesDetalle.find(params[:id])
+    def set_solicitud_detalle
+      @solicitud_detalle = SolicitudDetalle.find(params[:id])
     end
 
-    def solicitudes_detalle_params
-      params.require(:solicitudes_detalle).permit(:cantidad_solicitada, :cantidad_entregada)
+    def solicitud_detalle_params
+      params.require(:solicitud_detalle).permit(:solicitud_monitor_teclado_id, :componente_id, :cantidad_solicitada, :cantidad_entregada)
     end
 end

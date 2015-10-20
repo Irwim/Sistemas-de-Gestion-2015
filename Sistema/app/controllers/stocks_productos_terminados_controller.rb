@@ -1,47 +1,47 @@
 class StocksProductosTerminadosController < ApplicationController
-  before_action :set_stocks_productos_terminado, only: [:show, :edit, :update, :destroy]
+  before_action :set_stock_producto_terminado, only: [:show, :edit, :update, :destroy]
 
   respond_to :html
 
   def index
-    @stocks_productos_terminados = StocksProductosTerminado.all
+    @stocks_productos_terminados = StockProductoTerminado.all
     respond_with(@stocks_productos_terminados)
   end
 
   def show
-    respond_with(@stocks_productos_terminado)
+    respond_with(@stock_producto_terminado)
   end
 
   def new
-    @stocks_productos_terminado = StocksProductosTerminado.new
-    respond_with(@stocks_productos_terminado)
+    @stock_producto_terminado = StockProductoTerminado.new
+    respond_with(@stock_producto_terminado)
   end
 
   def edit
   end
 
   def create
-    @stocks_productos_terminado = StocksProductosTerminado.new(stocks_productos_terminado_params)
-    @stocks_productos_terminado.save
-    respond_with(@stocks_productos_terminado)
+    @stock_producto_terminado = StockProductoTerminado.new(stock_producto_terminado_params)
+    @stock_producto_terminado.save
+    respond_with(@stock_producto_terminado)
   end
 
   def update
-    @stocks_productos_terminado.update(stocks_productos_terminado_params)
-    respond_with(@stocks_productos_terminado)
+    @stock_producto_terminado.update(stock_producto_terminado_params)
+    respond_with(@stock_producto_terminado)
   end
 
   def destroy
-    @stocks_productos_terminado.destroy
-    respond_with(@stocks_productos_terminado)
+    @stock_producto_terminado.destroy
+    respond_with(@stock_producto_terminado)
   end
 
   private
-    def set_stocks_productos_terminado
-      @stocks_productos_terminado = StocksProductosTerminado.find(params[:id])
+    def set_stock_producto_terminado
+      @stock_producto_terminado = StockProductoTerminado.find(params[:id])
     end
 
-    def stocks_productos_terminado_params
-      params.require(:stocks_productos_terminado).permit(:cantidad_disponible)
+    def stock_producto_terminado_params
+      params.require(:stock_producto_terminado).permit(:deposito_id, :producto_terminado_id, :cantidad_disponible)
     end
 end

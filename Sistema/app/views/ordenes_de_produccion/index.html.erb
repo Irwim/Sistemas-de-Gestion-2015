@@ -1,0 +1,27 @@
+<h1>Listing ordenes_de_produccion</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fecha</th>
+      <th>Nro formulario</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ordenes_de_produccion.each do |orden_de_produccion| %>
+      <tr>
+        <td><%= orden_de_produccion.fecha %></td>
+        <td><%= orden_de_produccion.nro_formulario %></td>
+        <td><%= link_to 'Show', orden_de_produccion %></td>
+        <td><%= link_to 'Edit', edit_orden_de_produccion_path(orden_de_produccion) %></td>
+        <td><%= link_to 'Destroy', orden_de_produccion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Orden de produccion', new_orden_de_produccion_path %>

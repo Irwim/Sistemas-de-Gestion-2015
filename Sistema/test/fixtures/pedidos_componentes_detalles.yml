@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pedido_de_compra_componente_id: 
+  componente_id: 
+  cantidad_solicitada: 1
+
+two:
+  pedido_de_compra_componente_id: 
+  componente_id: 
+  cantidad_solicitada: 1

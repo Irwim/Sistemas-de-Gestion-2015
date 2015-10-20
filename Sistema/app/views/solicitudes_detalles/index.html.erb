@@ -3,6 +3,8 @@
 <table>
   <thead>
     <tr>
+      <th>Solicitud monitor teclado</th>
+      <th>Componente</th>
       <th>Cantidad solicitada</th>
       <th>Cantidad entregada</th>
       <th colspan="3"></th>
@@ -10,13 +12,15 @@
   </thead>
 
   <tbody>
-    <% @solicitudes_detalles.each do |solicitudes_detalle| %>
+    <% @solicitudes_detalles.each do |solicitud_detalle| %>
       <tr>
-        <td><%= solicitudes_detalle.cantidad_solicitada %></td>
-        <td><%= solicitudes_detalle.cantidad_entregada %></td>
-        <td><%= link_to 'Show', solicitudes_detalle %></td>
-        <td><%= link_to 'Edit', edit_solicitudes_detalle_path(solicitudes_detalle) %></td>
-        <td><%= link_to 'Destroy', solicitudes_detalle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= solicitud_detalle.solicitud_monitor_teclado %></td>
+        <td><%= solicitud_detalle.componente %></td>
+        <td><%= solicitud_detalle.cantidad_solicitada %></td>
+        <td><%= solicitud_detalle.cantidad_entregada %></td>
+        <td><%= link_to 'Show', solicitud_detalle %></td>
+        <td><%= link_to 'Edit', edit_solicitud_detalle_path(solicitud_detalle) %></td>
+        <td><%= link_to 'Destroy', solicitud_detalle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Solicitudes detalle', new_solicitudes_detalle_path %>
+<%= link_to 'New Solicitud detalle', new_solicitud_detalle_path %>

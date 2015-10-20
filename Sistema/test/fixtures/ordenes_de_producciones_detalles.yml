@@ -1,9 +1,0 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  cantidad_solicitada: 1
-  cantidad_terminada: 1
-
-two:
-  cantidad_solicitada: 1
-  cantidad_terminada: 1

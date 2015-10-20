@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th>Tipo de deposito</th>
       <th>Descripcion</th>
       <th colspan="3"></th>
     </tr>
@@ -11,6 +12,7 @@
   <tbody>
     <% @depositos.each do |deposito| %>
       <tr>
+        <td><%= deposito.tipo_de_deposito %></td>
         <td><%= deposito.descripcion %></td>
         <td><%= link_to 'Show', deposito %></td>
         <td><%= link_to 'Edit', edit_deposito_path(deposito) %></td>

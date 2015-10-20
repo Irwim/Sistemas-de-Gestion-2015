@@ -18,7 +18,7 @@ class DepositosControllerTest < ActionController::TestCase
 
   test "should create deposito" do
     assert_difference('Deposito.count') do
-      post :create, deposito: { descripcion: @deposito.descripcion }
+      post :create, deposito: { descripcion: @deposito.descripcion, tipo_de_deposito: @deposito.tipo_de_deposito }
     end
 
     assert_redirected_to deposito_path(assigns(:deposito))
@@ -35,7 +35,7 @@ class DepositosControllerTest < ActionController::TestCase
   end
 
   test "should update deposito" do
-    patch :update, id: @deposito, deposito: { descripcion: @deposito.descripcion }
+    patch :update, id: @deposito, deposito: { descripcion: @deposito.descripcion, tipo_de_deposito: @deposito.tipo_de_deposito }
     assert_redirected_to deposito_path(assigns(:deposito))
   end
 

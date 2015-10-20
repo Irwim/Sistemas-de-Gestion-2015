@@ -1,47 +1,47 @@
 class SolicitudesComponentesDetallesController < ApplicationController
-  before_action :set_solicitudes_componentes_detalle, only: [:show, :edit, :update, :destroy]
+  before_action :set_solicitud_componente_detalle, only: [:show, :edit, :update, :destroy]
 
   respond_to :html
 
   def index
-    @solicitudes_componentes_detalles = SolicitudesComponentesDetalle.all
+    @solicitudes_componentes_detalles = SolicitudComponenteDetalle.all
     respond_with(@solicitudes_componentes_detalles)
   end
 
   def show
-    respond_with(@solicitudes_componentes_detalle)
+    respond_with(@solicitud_componente_detalle)
   end
 
   def new
-    @solicitudes_componentes_detalle = SolicitudesComponentesDetalle.new
-    respond_with(@solicitudes_componentes_detalle)
+    @solicitud_componente_detalle = SolicitudComponenteDetalle.new
+    respond_with(@solicitud_componente_detalle)
   end
 
   def edit
   end
 
   def create
-    @solicitudes_componentes_detalle = SolicitudesComponentesDetalle.new(solicitudes_componentes_detalle_params)
-    @solicitudes_componentes_detalle.save
-    respond_with(@solicitudes_componentes_detalle)
+    @solicitud_componente_detalle = SolicitudComponenteDetalle.new(solicitud_componente_detalle_params)
+    @solicitud_componente_detalle.save
+    respond_with(@solicitud_componente_detalle)
   end
 
   def update
-    @solicitudes_componentes_detalle.update(solicitudes_componentes_detalle_params)
-    respond_with(@solicitudes_componentes_detalle)
+    @solicitud_componente_detalle.update(solicitud_componente_detalle_params)
+    respond_with(@solicitud_componente_detalle)
   end
 
   def destroy
-    @solicitudes_componentes_detalle.destroy
-    respond_with(@solicitudes_componentes_detalle)
+    @solicitud_componente_detalle.destroy
+    respond_with(@solicitud_componente_detalle)
   end
 
   private
-    def set_solicitudes_componentes_detalle
-      @solicitudes_componentes_detalle = SolicitudesComponentesDetalle.find(params[:id])
+    def set_solicitud_componente_detalle
+      @solicitud_componente_detalle = SolicitudComponenteDetalle.find(params[:id])
     end
 
-    def solicitudes_componentes_detalle_params
-      params.require(:solicitudes_componentes_detalle).permit(:cantidad_solicitada, :cantidad_entregada)
+    def solicitud_componente_detalle_params
+      params.require(:solicitud_componente_detalle).permit(:solicitud_componente_id, :componente_id, :cantidad_solicitada, :cantidad_entregada)
     end
 end

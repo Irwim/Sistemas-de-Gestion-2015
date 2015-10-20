@@ -1,7 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  deposito_id: 
+  producto_terminado_id: 
   cantidad_disponible: 1
 
 two:
+  deposito_id: 
+  producto_terminado_id: 
   cantidad_disponible: 1

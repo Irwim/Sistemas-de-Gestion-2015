@@ -1,47 +1,47 @@
 class MovimientosComponentesController < ApplicationController
-  before_action :set_movimientos_componente, only: [:show, :edit, :update, :destroy]
+  before_action :set_movimiento_componente, only: [:show, :edit, :update, :destroy]
 
   respond_to :html
 
   def index
-    @movimientos_componentes = MovimientosComponente.all
+    @movimientos_componentes = MovimientoComponente.all
     respond_with(@movimientos_componentes)
   end
 
   def show
-    respond_with(@movimientos_componente)
+    respond_with(@movimiento_componente)
   end
 
   def new
-    @movimientos_componente = MovimientosComponente.new
-    respond_with(@movimientos_componente)
+    @movimiento_componente = MovimientoComponente.new
+    respond_with(@movimiento_componente)
   end
 
   def edit
   end
 
   def create
-    @movimientos_componente = MovimientosComponente.new(movimientos_componente_params)
-    @movimientos_componente.save
-    respond_with(@movimientos_componente)
+    @movimiento_componente = MovimientoComponente.new(movimiento_componente_params)
+    @movimiento_componente.save
+    respond_with(@movimiento_componente)
   end
 
   def update
-    @movimientos_componente.update(movimientos_componente_params)
-    respond_with(@movimientos_componente)
+    @movimiento_componente.update(movimiento_componente_params)
+    respond_with(@movimiento_componente)
   end
 
   def destroy
-    @movimientos_componente.destroy
-    respond_with(@movimientos_componente)
+    @movimiento_componente.destroy
+    respond_with(@movimiento_componente)
   end
 
   private
-    def set_movimientos_componente
-      @movimientos_componente = MovimientosComponente.find(params[:id])
+    def set_movimiento_componente
+      @movimiento_componente = MovimientoComponente.find(params[:id])
     end
 
-    def movimientos_componente_params
-      params.require(:movimientos_componente).permit(:fecha, :cantidad_transferida)
+    def movimiento_componente_params
+      params.require(:movimiento_componente).permit(:deposito_id, :componente_id, :tipo_de_movimiento_id, :fecha, :cantidad_transferida)
     end
 end

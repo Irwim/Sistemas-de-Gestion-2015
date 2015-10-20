@@ -1,16 +1,24 @@
-<%= form_for(@stocks_componente) do |f| %>
-  <% if @stocks_componente.errors.any? %>
+<%= form_for(@stock_componente) do |f| %>
+  <% if @stock_componente.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@stocks_componente.errors.count, "error") %> prohibited this stocks_componente from being saved:</h2>
+      <h2><%= pluralize(@stock_componente.errors.count, "error") %> prohibited this stock_componente from being saved:</h2>
 
       <ul>
-      <% @stocks_componente.errors.full_messages.each do |message| %>
+      <% @stock_componente.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
 
+  <div class="field">
+    <%= f.label :deposito_id %><br>
+    <%= f.text_field :deposito_id %>
+  </div>
+  <div class="field">
+    <%= f.label :componente_id %><br>
+    <%= f.text_field :componente_id %>
+  </div>
   <div class="field">
     <%= f.label :cantidad_disponible %><br>
     <%= f.number_field :cantidad_disponible %>

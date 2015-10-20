@@ -2,7 +2,7 @@ require 'test_helper'
 
 class ProductosTerminadosControllerTest < ActionController::TestCase
   setup do
-    @productos_terminado = productos_terminados(:one)
+    @producto_terminado = productos_terminados(:one)
   end
 
   test "should get index" do
@@ -16,32 +16,32 @@ class ProductosTerminadosControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should create productos_terminado" do
-    assert_difference('ProductosTerminado.count') do
-      post :create, productos_terminado: { cantidad_minima: @productos_terminado.cantidad_minima, codigo: @productos_terminado.codigo, descripcion: @productos_terminado.descripcion, nombre: @productos_terminado.nombre }
+  test "should create producto_terminado" do
+    assert_difference('ProductoTerminado.count') do
+      post :create, producto_terminado: { cantidad_minima: @producto_terminado.cantidad_minima, categoria_producto_id: @producto_terminado.categoria_producto_id, codigo: @producto_terminado.codigo, descripcion: @producto_terminado.descripcion, modelo_id: @producto_terminado.modelo_id }
     end
 
-    assert_redirected_to productos_terminado_path(assigns(:productos_terminado))
+    assert_redirected_to producto_terminado_path(assigns(:producto_terminado))
   end
 
-  test "should show productos_terminado" do
-    get :show, id: @productos_terminado
+  test "should show producto_terminado" do
+    get :show, id: @producto_terminado
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, id: @productos_terminado
+    get :edit, id: @producto_terminado
     assert_response :success
   end
 
-  test "should update productos_terminado" do
-    patch :update, id: @productos_terminado, productos_terminado: { cantidad_minima: @productos_terminado.cantidad_minima, codigo: @productos_terminado.codigo, descripcion: @productos_terminado.descripcion, nombre: @productos_terminado.nombre }
-    assert_redirected_to productos_terminado_path(assigns(:productos_terminado))
+  test "should update producto_terminado" do
+    patch :update, id: @producto_terminado, producto_terminado: { cantidad_minima: @producto_terminado.cantidad_minima, categoria_producto_id: @producto_terminado.categoria_producto_id, codigo: @producto_terminado.codigo, descripcion: @producto_terminado.descripcion, modelo_id: @producto_terminado.modelo_id }
+    assert_redirected_to producto_terminado_path(assigns(:producto_terminado))
   end
 
-  test "should destroy productos_terminado" do
-    assert_difference('ProductosTerminado.count', -1) do
-      delete :destroy, id: @productos_terminado
+  test "should destroy producto_terminado" do
+    assert_difference('ProductoTerminado.count', -1) do
+      delete :destroy, id: @producto_terminado
     end
 
     assert_redirected_to productos_terminados_path

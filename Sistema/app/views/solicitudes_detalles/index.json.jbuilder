@@ -1,4 +1,4 @@
-json.array!(@solicitudes_detalles) do |solicitudes_detalle|
-  json.extract! solicitudes_detalle, :id, :cantidad_solicitada, :cantidad_entregada
-  json.url solicitudes_detalle_url(solicitudes_detalle, format: :json)
+json.array!(@solicitudes_detalles) do |solicitud_detalle|
+  json.extract! solicitud_detalle, :id, :solicitud_monitor_teclado_id, :componente_id, :cantidad_solicitada, :cantidad_entregada
+  json.url solicitud_detalle_url(solicitud_detalle, format: :json)
 end

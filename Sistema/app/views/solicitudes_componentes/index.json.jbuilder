@@ -1,4 +1,4 @@
-json.array!(@solicitudes_componentes) do |solicitudes_componente|
-  json.extract! solicitudes_componente, :id, :fecha, :numero_de_formulario, :estado_de_solicitud, :baja_de_solicitud
-  json.url solicitudes_componente_url(solicitudes_componente, format: :json)
+json.array!(@solicitudes_componentes) do |solicitud_componente|
+  json.extract! solicitud_componente, :id, :deposito_id, :deposito_id, :fecha, :nro_formulario, :fecha_baja, :estado
+  json.url solicitud_componente_url(solicitud_componente, format: :json)
 end

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @orden_de_produccion.fecha %>
+</p>
+
+<p>
+  <strong>Nro formulario:</strong>
+  <%= @orden_de_produccion.nro_formulario %>
+</p>
+
+<%= link_to 'Edit', edit_orden_de_produccion_path(@orden_de_produccion) %> |
+<%= link_to 'Back', ordenes_de_produccion_path %>

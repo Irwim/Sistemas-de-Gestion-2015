@@ -1,9 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  fecha: 2015-10-11
+  deposito_id: 
+  componente_id: 
+  tipo_de_movimiento_id: 
+  fecha: 2015-10-20
   cantidad_transferida: 1
 
 two:
-  fecha: 2015-10-11
+  deposito_id: 
+  componente_id: 
+  tipo_de_movimiento_id: 
+  fecha: 2015-10-20
   cantidad_transferida: 1

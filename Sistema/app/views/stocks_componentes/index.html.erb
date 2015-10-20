@@ -3,18 +3,22 @@
 <table>
   <thead>
     <tr>
+      <th>Deposito</th>
+      <th>Componente</th>
       <th>Cantidad disponible</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @stocks_componentes.each do |stocks_componente| %>
+    <% @stocks_componentes.each do |stock_componente| %>
       <tr>
-        <td><%= stocks_componente.cantidad_disponible %></td>
-        <td><%= link_to 'Show', stocks_componente %></td>
-        <td><%= link_to 'Edit', edit_stocks_componente_path(stocks_componente) %></td>
-        <td><%= link_to 'Destroy', stocks_componente, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= stock_componente.deposito %></td>
+        <td><%= stock_componente.componente %></td>
+        <td><%= stock_componente.cantidad_disponible %></td>
+        <td><%= link_to 'Show', stock_componente %></td>
+        <td><%= link_to 'Edit', edit_stock_componente_path(stock_componente) %></td>
+        <td><%= link_to 'Destroy', stock_componente, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -22,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Stocks componente', new_stocks_componente_path %>
+<%= link_to 'New Stock componente', new_stock_componente_path %>

@@ -1,16 +1,24 @@
-<%= form_for(@solicitudes_detalle) do |f| %>
-  <% if @solicitudes_detalle.errors.any? %>
+<%= form_for(@solicitud_detalle) do |f| %>
+  <% if @solicitud_detalle.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@solicitudes_detalle.errors.count, "error") %> prohibited this solicitudes_detalle from being saved:</h2>
+      <h2><%= pluralize(@solicitud_detalle.errors.count, "error") %> prohibited this solicitud_detalle from being saved:</h2>
 
       <ul>
-      <% @solicitudes_detalle.errors.full_messages.each do |message| %>
+      <% @solicitud_detalle.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
 
+  <div class="field">
+    <%= f.label :solicitud_monitor_teclado_id %><br>
+    <%= f.text_field :solicitud_monitor_teclado_id %>
+  </div>
+  <div class="field">
+    <%= f.label :componente_id %><br>
+    <%= f.text_field :componente_id %>
+  </div>
   <div class="field">
     <%= f.label :cantidad_solicitada %><br>
     <%= f.number_field :cantidad_solicitada %>

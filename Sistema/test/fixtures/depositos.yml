@@ -1,7 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  descripcion: MyString
+  tipo_de_deposito: 1
+  descripcion: MyText
 
 two:
-  descripcion: MyString
+  tipo_de_deposito: 1
+  descripcion: MyText

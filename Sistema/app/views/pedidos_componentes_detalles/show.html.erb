@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pedido de compra componente:</strong>
+  <%= @pedido_componente_detalle.pedido_de_compra_componente %>
+</p>
+
+<p>
+  <strong>Componente:</strong>
+  <%= @pedido_componente_detalle.componente %>
+</p>
+
+<p>
+  <strong>Cantidad solicitada:</strong>
+  <%= @pedido_componente_detalle.cantidad_solicitada %>
+</p>
+
+<%= link_to 'Edit', edit_pedido_componente_detalle_path(@pedido_componente_detalle) %> |
+<%= link_to 'Back', pedidos_componentes_detalles_path %>

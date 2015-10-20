@@ -2,7 +2,7 @@ require 'test_helper'
 
 class PedidosDeComprasComponentesControllerTest < ActionController::TestCase
   setup do
-    @pedidos_de_compras_componente = pedidos_de_compras_componentes(:one)
+    @pedido_de_compra_componente = pedidos_de_compras_componentes(:one)
   end
 
   test "should get index" do
@@ -16,32 +16,32 @@ class PedidosDeComprasComponentesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should create pedidos_de_compras_componente" do
-    assert_difference('PedidosDeComprasComponente.count') do
-      post :create, pedidos_de_compras_componente: { baja_de_pedido: @pedidos_de_compras_componente.baja_de_pedido, estado_de_pedido: @pedidos_de_compras_componente.estado_de_pedido, fecha: @pedidos_de_compras_componente.fecha, numero_de_formulario: @pedidos_de_compras_componente.numero_de_formulario }
+  test "should create pedido_de_compra_componente" do
+    assert_difference('PedidoDeCompraComponente.count') do
+      post :create, pedido_de_compra_componente: { baja: @pedido_de_compra_componente.baja, estado: @pedido_de_compra_componente.estado, fecha: @pedido_de_compra_componente.fecha, nro_formulario: @pedido_de_compra_componente.nro_formulario }
     end
 
-    assert_redirected_to pedidos_de_compras_componente_path(assigns(:pedidos_de_compras_componente))
+    assert_redirected_to pedido_de_compra_componente_path(assigns(:pedido_de_compra_componente))
   end
 
-  test "should show pedidos_de_compras_componente" do
-    get :show, id: @pedidos_de_compras_componente
+  test "should show pedido_de_compra_componente" do
+    get :show, id: @pedido_de_compra_componente
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, id: @pedidos_de_compras_componente
+    get :edit, id: @pedido_de_compra_componente
     assert_response :success
   end
 
-  test "should update pedidos_de_compras_componente" do
-    patch :update, id: @pedidos_de_compras_componente, pedidos_de_compras_componente: { baja_de_pedido: @pedidos_de_compras_componente.baja_de_pedido, estado_de_pedido: @pedidos_de_compras_componente.estado_de_pedido, fecha: @pedidos_de_compras_componente.fecha, numero_de_formulario: @pedidos_de_compras_componente.numero_de_formulario }
-    assert_redirected_to pedidos_de_compras_componente_path(assigns(:pedidos_de_compras_componente))
+  test "should update pedido_de_compra_componente" do
+    patch :update, id: @pedido_de_compra_componente, pedido_de_compra_componente: { baja: @pedido_de_compra_componente.baja, estado: @pedido_de_compra_componente.estado, fecha: @pedido_de_compra_componente.fecha, nro_formulario: @pedido_de_compra_componente.nro_formulario }
+    assert_redirected_to pedido_de_compra_componente_path(assigns(:pedido_de_compra_componente))
   end
 
-  test "should destroy pedidos_de_compras_componente" do
-    assert_difference('PedidosDeComprasComponente.count', -1) do
-      delete :destroy, id: @pedidos_de_compras_componente
+  test "should destroy pedido_de_compra_componente" do
+    assert_difference('PedidoDeCompraComponente.count', -1) do
+      delete :destroy, id: @pedido_de_compra_componente
     end
 
     assert_redirected_to pedidos_de_compras_componentes_path

@@ -1,16 +1,28 @@
-<%= form_for(@movimientos_producto) do |f| %>
-  <% if @movimientos_producto.errors.any? %>
+<%= form_for(@movimiento_producto) do |f| %>
+  <% if @movimiento_producto.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@movimientos_producto.errors.count, "error") %> prohibited this movimientos_producto from being saved:</h2>
+      <h2><%= pluralize(@movimiento_producto.errors.count, "error") %> prohibited this movimiento_producto from being saved:</h2>
 
       <ul>
-      <% @movimientos_producto.errors.full_messages.each do |message| %>
+      <% @movimiento_producto.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
 
+  <div class="field">
+    <%= f.label :deposito_id %><br>
+    <%= f.text_field :deposito_id %>
+  </div>
+  <div class="field">
+    <%= f.label :producto_terminado_id %><br>
+    <%= f.text_field :producto_terminado_id %>
+  </div>
+  <div class="field">
+    <%= f.label :tipo_de_movimiento_id %><br>
+    <%= f.text_field :tipo_de_movimiento_id %>
+  </div>
   <div class="field">
     <%= f.label :fecha %><br>
     <%= f.date_select :fecha %>

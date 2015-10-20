@@ -2,7 +2,7 @@ require 'test_helper'
 
 class CategoriasProductosControllerTest < ActionController::TestCase
   setup do
-    @categorias_producto = categorias_productos(:one)
+    @categoria_producto = categorias_productos(:one)
   end
 
   test "should get index" do
@@ -16,32 +16,32 @@ class CategoriasProductosControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should create categorias_producto" do
-    assert_difference('CategoriasProducto.count') do
-      post :create, categorias_producto: { descripcion: @categorias_producto.descripcion, nombre: @categorias_producto.nombre }
+  test "should create categoria_producto" do
+    assert_difference('CategoriaProducto.count') do
+      post :create, categoria_producto: { descripcion: @categoria_producto.descripcion, nombre: @categoria_producto.nombre }
     end
 
-    assert_redirected_to categorias_producto_path(assigns(:categorias_producto))
+    assert_redirected_to categoria_producto_path(assigns(:categoria_producto))
   end
 
-  test "should show categorias_producto" do
-    get :show, id: @categorias_producto
+  test "should show categoria_producto" do
+    get :show, id: @categoria_producto
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, id: @categorias_producto
+    get :edit, id: @categoria_producto
     assert_response :success
   end
 
-  test "should update categorias_producto" do
-    patch :update, id: @categorias_producto, categorias_producto: { descripcion: @categorias_producto.descripcion, nombre: @categorias_producto.nombre }
-    assert_redirected_to categorias_producto_path(assigns(:categorias_producto))
+  test "should update categoria_producto" do
+    patch :update, id: @categoria_producto, categoria_producto: { descripcion: @categoria_producto.descripcion, nombre: @categoria_producto.nombre }
+    assert_redirected_to categoria_producto_path(assigns(:categoria_producto))
   end
 
-  test "should destroy categorias_producto" do
-    assert_difference('CategoriasProducto.count', -1) do
-      delete :destroy, id: @categorias_producto
+  test "should destroy categoria_producto" do
+    assert_difference('CategoriaProducto.count', -1) do
+      delete :destroy, id: @categoria_producto
     end
 
     assert_redirected_to categorias_productos_path

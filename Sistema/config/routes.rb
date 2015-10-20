@@ -1,19 +1,5 @@
 Rails.application.routes.draw do
-  resources :pedidos_de_compras_de_componentes_detalles
-
-  resources :pedidos_de_compras_componentes
-
-  resources :traslado_detalles
-
-  resources :traslado_productos_terminados
-
-  resources :ordenes_de_producciones_detalles
-
-  resources :ordenes_de_producciones
-
-  resources :tipos_de_movimientos
-
-  resources :stocks_productos_terminados
+  resources :traslados_detalles
 
   resources :movimientos_productos
 
@@ -21,31 +7,41 @@ Rails.application.routes.draw do
 
   resources :solicitudes_detalles
 
-  resources :solicitudes_monitores_teclados
-
   resources :solicitudes_componentes_detalles
 
-  resources :solicitudes_componentes
+  resources :pedidos_componentes_detalles
 
-  resources :formularios_cpus_producidas_detalles
-
-  resources :formularios_cpus_producidas
-
-  resources :categorias_productos
-
-  resources :categorias_componentes
-
-  resources :tipos_de_depositos
+  resources :stocks_productos_terminados
 
   resources :stocks_componentes
 
+  resources :traslados_productos_terminados
+
+  resources :ordenes_de_produccion_detalles
+
   resources :productos_terminados
 
+  resources :solitudes_monitores_teclados
+
+  resources :solicitudes_componentes
+
   resources :depositos
+
+  resources :tipos_de_depositos
+
+  resources :pedidos_de_compras_componentes
+
+  resources :tipos_de_movimientos
+
+  resources :ordenes_de_produccion
+
+  resources :categorias_productos
 
   resources :modelos
 
   resources :marcas
+
+  resources :categorias_componentes
 
   resources :componentes
 

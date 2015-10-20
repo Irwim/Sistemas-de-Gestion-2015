@@ -1,0 +1,29 @@
+<h1>Listing traslados_detalles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Traslado producto terminado</th>
+      <th>Producto terminado</th>
+      <th>Cantidad a transferir</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @traslados_detalles.each do |traslado_detalle| %>
+      <tr>
+        <td><%= traslado_detalle.traslado_producto_terminado %></td>
+        <td><%= traslado_detalle.producto_terminado %></td>
+        <td><%= traslado_detalle.cantidad_a_transferir %></td>
+        <td><%= link_to 'Show', traslado_detalle %></td>
+        <td><%= link_to 'Edit', edit_traslado_detalle_path(traslado_detalle) %></td>
+        <td><%= link_to 'Destroy', traslado_detalle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Traslado detalle', new_traslado_detalle_path %>

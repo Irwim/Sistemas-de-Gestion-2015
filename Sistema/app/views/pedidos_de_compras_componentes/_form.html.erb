@@ -1,10 +1,10 @@
-<%= form_for(@pedidos_de_compras_componente) do |f| %>
-  <% if @pedidos_de_compras_componente.errors.any? %>
+<%= form_for(@pedido_de_compra_componente) do |f| %>
+  <% if @pedido_de_compra_componente.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@pedidos_de_compras_componente.errors.count, "error") %> prohibited this pedidos_de_compras_componente from being saved:</h2>
+      <h2><%= pluralize(@pedido_de_compra_componente.errors.count, "error") %> prohibited this pedido_de_compra_componente from being saved:</h2>
 
       <ul>
-      <% @pedidos_de_compras_componente.errors.full_messages.each do |message| %>
+      <% @pedido_de_compra_componente.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -16,16 +16,16 @@
     <%= f.date_select :fecha %>
   </div>
   <div class="field">
-    <%= f.label :baja_de_pedido %><br>
-    <%= f.date_select :baja_de_pedido %>
+    <%= f.label :baja %><br>
+    <%= f.date_select :baja %>
   </div>
   <div class="field">
-    <%= f.label :estado_de_pedido %><br>
-    <%= f.check_box :estado_de_pedido %>
+    <%= f.label :nro_formulario %><br>
+    <%= f.number_field :nro_formulario %>
   </div>
   <div class="field">
-    <%= f.label :numero_de_formulario %><br>
-    <%= f.number_field :numero_de_formulario %>
+    <%= f.label :estado %><br>
+    <%= f.text_field :estado %>
   </div>
   <div class="actions">
     <%= f.submit %>

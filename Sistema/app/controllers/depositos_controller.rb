@@ -42,6 +42,6 @@ class DepositosController < ApplicationController
     end
 
     def deposito_params
-      params.require(:deposito).permit(:descripcion)
+      params.require(:deposito).permit(:tipo_de_deposito, :descripcion)
     end
 end

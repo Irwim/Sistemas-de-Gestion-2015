@@ -2,7 +2,7 @@ require 'test_helper'
 
 class StocksComponentesControllerTest < ActionController::TestCase
   setup do
-    @stocks_componente = stocks_componentes(:one)
+    @stock_componente = stocks_componentes(:one)
   end
 
   test "should get index" do
@@ -16,32 +16,32 @@ class StocksComponentesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should create stocks_componente" do
-    assert_difference('StocksComponente.count') do
-      post :create, stocks_componente: { cantidad_disponible: @stocks_componente.cantidad_disponible }
+  test "should create stock_componente" do
+    assert_difference('StockComponente.count') do
+      post :create, stock_componente: { cantidad_disponible: @stock_componente.cantidad_disponible, componente_id: @stock_componente.componente_id, deposito_id: @stock_componente.deposito_id }
     end
 
-    assert_redirected_to stocks_componente_path(assigns(:stocks_componente))
+    assert_redirected_to stock_componente_path(assigns(:stock_componente))
   end
 
-  test "should show stocks_componente" do
-    get :show, id: @stocks_componente
+  test "should show stock_componente" do
+    get :show, id: @stock_componente
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, id: @stocks_componente
+    get :edit, id: @stock_componente
     assert_response :success
   end
 
-  test "should update stocks_componente" do
-    patch :update, id: @stocks_componente, stocks_componente: { cantidad_disponible: @stocks_componente.cantidad_disponible }
-    assert_redirected_to stocks_componente_path(assigns(:stocks_componente))
+  test "should update stock_componente" do
+    patch :update, id: @stock_componente, stock_componente: { cantidad_disponible: @stock_componente.cantidad_disponible, componente_id: @stock_componente.componente_id, deposito_id: @stock_componente.deposito_id }
+    assert_redirected_to stock_componente_path(assigns(:stock_componente))
   end
 
-  test "should destroy stocks_componente" do
-    assert_difference('StocksComponente.count', -1) do
-      delete :destroy, id: @stocks_componente
+  test "should destroy stock_componente" do
+    assert_difference('StockComponente.count', -1) do
+      delete :destroy, id: @stock_componente
     end
 
     assert_redirected_to stocks_componentes_path

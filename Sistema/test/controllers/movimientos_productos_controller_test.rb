@@ -2,7 +2,7 @@ require 'test_helper'
 
 class MovimientosProductosControllerTest < ActionController::TestCase
   setup do
-    @movimientos_producto = movimientos_productos(:one)
+    @movimiento_producto = movimientos_productos(:one)
   end
 
   test "should get index" do
@@ -16,32 +16,32 @@ class MovimientosProductosControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should create movimientos_producto" do
-    assert_difference('MovimientosProducto.count') do
-      post :create, movimientos_producto: { cantidad_transferida: @movimientos_producto.cantidad_transferida, fecha: @movimientos_producto.fecha }
+  test "should create movimiento_producto" do
+    assert_difference('MovimientoProducto.count') do
+      post :create, movimiento_producto: { cantidad_transferida: @movimiento_producto.cantidad_transferida, deposito_id: @movimiento_producto.deposito_id, fecha: @movimiento_producto.fecha, producto_terminado_id: @movimiento_producto.producto_terminado_id, tipo_de_movimiento_id: @movimiento_producto.tipo_de_movimiento_id }
     end
 
-    assert_redirected_to movimientos_producto_path(assigns(:movimientos_producto))
+    assert_redirected_to movimiento_producto_path(assigns(:movimiento_producto))
   end
 
-  test "should show movimientos_producto" do
-    get :show, id: @movimientos_producto
+  test "should show movimiento_producto" do
+    get :show, id: @movimiento_producto
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, id: @movimientos_producto
+    get :edit, id: @movimiento_producto
     assert_response :success
   end
 
-  test "should update movimientos_producto" do
-    patch :update, id: @movimientos_producto, movimientos_producto: { cantidad_transferida: @movimientos_producto.cantidad_transferida, fecha: @movimientos_producto.fecha }
-    assert_redirected_to movimientos_producto_path(assigns(:movimientos_producto))
+  test "should update movimiento_producto" do
+    patch :update, id: @movimiento_producto, movimiento_producto: { cantidad_transferida: @movimiento_producto.cantidad_transferida, deposito_id: @movimiento_producto.deposito_id, fecha: @movimiento_producto.fecha, producto_terminado_id: @movimiento_producto.producto_terminado_id, tipo_de_movimiento_id: @movimiento_producto.tipo_de_movimiento_id }
+    assert_redirected_to movimiento_producto_path(assigns(:movimiento_producto))
   end
 
-  test "should destroy movimientos_producto" do
-    assert_difference('MovimientosProducto.count', -1) do
-      delete :destroy, id: @movimientos_producto
+  test "should destroy movimiento_producto" do
+    assert_difference('MovimientoProducto.count', -1) do
+      delete :destroy, id: @movimiento_producto
     end
 
     assert_redirected_to movimientos_productos_path

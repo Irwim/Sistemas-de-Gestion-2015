@@ -4,23 +4,23 @@
   <thead>
     <tr>
       <th>Fecha</th>
-      <th>Baja de pedido</th>
-      <th>Estado de pedido</th>
-      <th>Numero de formulario</th>
+      <th>Baja</th>
+      <th>Nro formulario</th>
+      <th>Estado</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @pedidos_de_compras_componentes.each do |pedidos_de_compras_componente| %>
+    <% @pedidos_de_compras_componentes.each do |pedido_de_compra_componente| %>
       <tr>
-        <td><%= pedidos_de_compras_componente.fecha %></td>
-        <td><%= pedidos_de_compras_componente.baja_de_pedido %></td>
-        <td><%= pedidos_de_compras_componente.estado_de_pedido %></td>
-        <td><%= pedidos_de_compras_componente.numero_de_formulario %></td>
-        <td><%= link_to 'Show', pedidos_de_compras_componente %></td>
-        <td><%= link_to 'Edit', edit_pedidos_de_compras_componente_path(pedidos_de_compras_componente) %></td>
-        <td><%= link_to 'Destroy', pedidos_de_compras_componente, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= pedido_de_compra_componente.fecha %></td>
+        <td><%= pedido_de_compra_componente.baja %></td>
+        <td><%= pedido_de_compra_componente.nro_formulario %></td>
+        <td><%= pedido_de_compra_componente.estado %></td>
+        <td><%= link_to 'Show', pedido_de_compra_componente %></td>
+        <td><%= link_to 'Edit', edit_pedido_de_compra_componente_path(pedido_de_compra_componente) %></td>
+        <td><%= link_to 'Destroy', pedido_de_compra_componente, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Pedidos de compras componente', new_pedidos_de_compras_componente_path %>
+<%= link_to 'New Pedido de compra componente', new_pedido_de_compra_componente_path %>

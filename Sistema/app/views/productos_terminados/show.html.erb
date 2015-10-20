@@ -1,24 +1,29 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Nombre:</strong>
-  <%= @productos_terminado.nombre %>
+  <strong>Modelo:</strong>
+  <%= @producto_terminado.modelo %>
+</p>
+
+<p>
+  <strong>Categoria producto:</strong>
+  <%= @producto_terminado.categoria_producto %>
 </p>
 
 <p>
   <strong>Codigo:</strong>
-  <%= @productos_terminado.codigo %>
-</p>
-
-<p>
-  <strong>Descripcion:</strong>
-  <%= @productos_terminado.descripcion %>
+  <%= @producto_terminado.codigo %>
 </p>
 
 <p>
   <strong>Cantidad minima:</strong>
-  <%= @productos_terminado.cantidad_minima %>
+  <%= @producto_terminado.cantidad_minima %>
 </p>
 
-<%= link_to 'Edit', edit_productos_terminado_path(@productos_terminado) %> |
+<p>
+  <strong>Descripcion:</strong>
+  <%= @producto_terminado.descripcion %>
+</p>
+
+<%= link_to 'Edit', edit_producto_terminado_path(@producto_terminado) %> |
 <%= link_to 'Back', productos_terminados_path %>

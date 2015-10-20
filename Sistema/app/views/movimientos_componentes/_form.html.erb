@@ -1,16 +1,28 @@
-<%= form_for(@movimientos_componente) do |f| %>
-  <% if @movimientos_componente.errors.any? %>
+<%= form_for(@movimiento_componente) do |f| %>
+  <% if @movimiento_componente.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@movimientos_componente.errors.count, "error") %> prohibited this movimientos_componente from being saved:</h2>
+      <h2><%= pluralize(@movimiento_componente.errors.count, "error") %> prohibited this movimiento_componente from being saved:</h2>
 
       <ul>
-      <% @movimientos_componente.errors.full_messages.each do |message| %>
+      <% @movimiento_componente.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
 
+  <div class="field">
+    <%= f.label :deposito_id %><br>
+    <%= f.text_field :deposito_id %>
+  </div>
+  <div class="field">
+    <%= f.label :componente_id %><br>
+    <%= f.text_field :componente_id %>
+  </div>
+  <div class="field">
+    <%= f.label :tipo_de_movimiento_id %><br>
+    <%= f.text_field :tipo_de_movimiento_id %>
+  </div>
   <div class="field">
     <%= f.label :fecha %><br>
     <%= f.date_select :fecha %>

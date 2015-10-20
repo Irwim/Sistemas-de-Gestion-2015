@@ -3,18 +3,22 @@
 <table>
   <thead>
     <tr>
+      <th>Deposito</th>
+      <th>Producto terminado</th>
       <th>Cantidad disponible</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @stocks_productos_terminados.each do |stocks_productos_terminado| %>
+    <% @stocks_productos_terminados.each do |stock_producto_terminado| %>
       <tr>
-        <td><%= stocks_productos_terminado.cantidad_disponible %></td>
-        <td><%= link_to 'Show', stocks_productos_terminado %></td>
-        <td><%= link_to 'Edit', edit_stocks_productos_terminado_path(stocks_productos_terminado) %></td>
-        <td><%= link_to 'Destroy', stocks_productos_terminado, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= stock_producto_terminado.deposito %></td>
+        <td><%= stock_producto_terminado.producto_terminado %></td>
+        <td><%= stock_producto_terminado.cantidad_disponible %></td>
+        <td><%= link_to 'Show', stock_producto_terminado %></td>
+        <td><%= link_to 'Edit', edit_stock_producto_terminado_path(stock_producto_terminado) %></td>
+        <td><%= link_to 'Destroy', stock_producto_terminado, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -22,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Stocks productos terminado', new_stocks_productos_terminado_path %>
+<%= link_to 'New Stock producto terminado', new_stock_producto_terminado_path %>

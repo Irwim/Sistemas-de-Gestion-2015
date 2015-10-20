@@ -1,10 +1,10 @@
-<%= form_for(@categorias_producto) do |f| %>
-  <% if @categorias_producto.errors.any? %>
+<%= form_for(@categoria_producto) do |f| %>
+  <% if @categoria_producto.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@categorias_producto.errors.count, "error") %> prohibited this categorias_producto from being saved:</h2>
+      <h2><%= pluralize(@categoria_producto.errors.count, "error") %> prohibited this categoria_producto from being saved:</h2>
 
       <ul>
-      <% @categorias_producto.errors.full_messages.each do |message| %>
+      <% @categoria_producto.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>

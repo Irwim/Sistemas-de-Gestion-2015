@@ -1,14 +1,29 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Deposito:</strong>
+  <%= @movimiento_componente.deposito %>
+</p>
+
+<p>
+  <strong>Componente:</strong>
+  <%= @movimiento_componente.componente %>
+</p>
+
+<p>
+  <strong>Tipo de movimiento:</strong>
+  <%= @movimiento_componente.tipo_de_movimiento %>
+</p>
+
+<p>
   <strong>Fecha:</strong>
-  <%= @movimientos_componente.fecha %>
+  <%= @movimiento_componente.fecha %>
 </p>
 
 <p>
   <strong>Cantidad transferida:</strong>
-  <%= @movimientos_componente.cantidad_transferida %>
+  <%= @movimiento_componente.cantidad_transferida %>
 </p>
 
-<%= link_to 'Edit', edit_movimientos_componente_path(@movimientos_componente) %> |
+<%= link_to 'Edit', edit_movimiento_componente_path(@movimiento_componente) %> |
 <%= link_to 'Back', movimientos_componentes_path %>

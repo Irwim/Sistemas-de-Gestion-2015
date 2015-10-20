@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  orden_de_produccion_id: 
+  deposito_id: 
+  deposito_id: 
+  nro_formulario: 1
+  fecha: 2015-10-20
+
+two:
+  orden_de_produccion_id: 
+  deposito_id: 
+  deposito_id: 
+  nro_formulario: 1
+  fecha: 2015-10-20

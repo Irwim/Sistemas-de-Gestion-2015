@@ -1,9 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Cantidad disponible:</strong>
-  <%= @stocks_componente.cantidad_disponible %>
+  <strong>Deposito:</strong>
+  <%= @stock_componente.deposito %>
 </p>
 
-<%= link_to 'Edit', edit_stocks_componente_path(@stocks_componente) %> |
+<p>
+  <strong>Componente:</strong>
+  <%= @stock_componente.componente %>
+</p>
+
+<p>
+  <strong>Cantidad disponible:</strong>
+  <%= @stock_componente.cantidad_disponible %>
+</p>
+
+<%= link_to 'Edit', edit_stock_componente_path(@stock_componente) %> |
 <%= link_to 'Back', stocks_componentes_path %>

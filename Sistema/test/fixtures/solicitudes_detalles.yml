@@ -1,9 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  solicitud_monitor_teclado_id: 
+  componente_id: 
   cantidad_solicitada: 1
   cantidad_entregada: 1
 
 two:
+  solicitud_monitor_teclado_id: 
+  componente_id: 
   cantidad_solicitada: 1
   cantidad_entregada: 1

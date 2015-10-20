@@ -2,7 +2,7 @@ require 'test_helper'
 
 class TiposDeMovimientosControllerTest < ActionController::TestCase
   setup do
-    @tipos_de_movimiento = tipos_de_movimientos(:one)
+    @tipo_de_movimiento = tipos_de_movimientos(:one)
   end
 
   test "should get index" do
@@ -16,32 +16,32 @@ class TiposDeMovimientosControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should create tipos_de_movimiento" do
-    assert_difference('TiposDeMovimiento.count') do
-      post :create, tipos_de_movimiento: { descripcion: @tipos_de_movimiento.descripcion, nombre: @tipos_de_movimiento.nombre }
+  test "should create tipo_de_movimiento" do
+    assert_difference('TipoDeMovimiento.count') do
+      post :create, tipo_de_movimiento: { descripcion: @tipo_de_movimiento.descripcion, nombre: @tipo_de_movimiento.nombre }
     end
 
-    assert_redirected_to tipos_de_movimiento_path(assigns(:tipos_de_movimiento))
+    assert_redirected_to tipo_de_movimiento_path(assigns(:tipo_de_movimiento))
   end
 
-  test "should show tipos_de_movimiento" do
-    get :show, id: @tipos_de_movimiento
+  test "should show tipo_de_movimiento" do
+    get :show, id: @tipo_de_movimiento
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, id: @tipos_de_movimiento
+    get :edit, id: @tipo_de_movimiento
     assert_response :success
   end
 
-  test "should update tipos_de_movimiento" do
-    patch :update, id: @tipos_de_movimiento, tipos_de_movimiento: { descripcion: @tipos_de_movimiento.descripcion, nombre: @tipos_de_movimiento.nombre }
-    assert_redirected_to tipos_de_movimiento_path(assigns(:tipos_de_movimiento))
+  test "should update tipo_de_movimiento" do
+    patch :update, id: @tipo_de_movimiento, tipo_de_movimiento: { descripcion: @tipo_de_movimiento.descripcion, nombre: @tipo_de_movimiento.nombre }
+    assert_redirected_to tipo_de_movimiento_path(assigns(:tipo_de_movimiento))
   end
 
-  test "should destroy tipos_de_movimiento" do
-    assert_difference('TiposDeMovimiento.count', -1) do
-      delete :destroy, id: @tipos_de_movimiento
+  test "should destroy tipo_de_movimiento" do
+    assert_difference('TipoDeMovimiento.count', -1) do
+      delete :destroy, id: @tipo_de_movimiento
     end
 
     assert_redirected_to tipos_de_movimientos_path

@@ -10,13 +10,13 @@
   </thead>
 
   <tbody>
-    <% @categorias_productos.each do |categorias_producto| %>
+    <% @categorias_productos.each do |categoria_producto| %>
       <tr>
-        <td><%= categorias_producto.nombre %></td>
-        <td><%= categorias_producto.descripcion %></td>
-        <td><%= link_to 'Show', categorias_producto %></td>
-        <td><%= link_to 'Edit', edit_categorias_producto_path(categorias_producto) %></td>
-        <td><%= link_to 'Destroy', categorias_producto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= categoria_producto.nombre %></td>
+        <td><%= categoria_producto.descripcion %></td>
+        <td><%= link_to 'Show', categoria_producto %></td>
+        <td><%= link_to 'Edit', edit_categoria_producto_path(categoria_producto) %></td>
+        <td><%= link_to 'Destroy', categoria_producto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +24,4 @@
 
 <br>
 
-<%= link_to 'New Categorias producto', new_categorias_producto_path %>
+<%= link_to 'New Categoria producto', new_categoria_producto_path %>

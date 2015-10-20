@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  traslado_producto_terminado_id: 
+  producto_terminado_id: 
+  cantidad_a_transferir: 1
+
+two:
+  traslado_producto_terminado_id: 
+  producto_terminado_id: 
+  cantidad_a_transferir: 1

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Traslado producto terminado:</strong>
+  <%= @traslado_detalle.traslado_producto_terminado %>
+</p>
+
+<p>
+  <strong>Producto terminado:</strong>
+  <%= @traslado_detalle.producto_terminado %>
+</p>
+
+<p>
+  <strong>Cantidad a transferir:</strong>
+  <%= @traslado_detalle.cantidad_a_transferir %>
+</p>
+
+<%= link_to 'Edit', edit_traslado_detalle_path(@traslado_detalle) %> |
+<%= link_to 'Back', traslados_detalles_path %>

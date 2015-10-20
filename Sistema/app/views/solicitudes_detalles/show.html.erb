@@ -1,14 +1,24 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Solicitud monitor teclado:</strong>
+  <%= @solicitud_detalle.solicitud_monitor_teclado %>
+</p>
+
+<p>
+  <strong>Componente:</strong>
+  <%= @solicitud_detalle.componente %>
+</p>
+
+<p>
   <strong>Cantidad solicitada:</strong>
-  <%= @solicitudes_detalle.cantidad_solicitada %>
+  <%= @solicitud_detalle.cantidad_solicitada %>
 </p>
 
 <p>
   <strong>Cantidad entregada:</strong>
-  <%= @solicitudes_detalle.cantidad_entregada %>
+  <%= @solicitud_detalle.cantidad_entregada %>
 </p>
 
-<%= link_to 'Edit', edit_solicitudes_detalle_path(@solicitudes_detalle) %> |
+<%= link_to 'Edit', edit_solicitud_detalle_path(@solicitud_detalle) %> |
 <%= link_to 'Back', solicitudes_detalles_path %>

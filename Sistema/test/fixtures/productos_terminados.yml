@@ -1,13 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  nombre: MyString
+  modelo_id: 
+  categoria_producto_id: 
   codigo: MyString
-  descripcion: MyString
   cantidad_minima: 1
+  descripcion: MyText
 
 two:
-  nombre: MyString
+  modelo_id: 
+  categoria_producto_id: 
   codigo: MyString
-  descripcion: MyString
   cantidad_minima: 1
+  descripcion: MyText

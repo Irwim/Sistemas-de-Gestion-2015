@@ -2,7 +2,7 @@ require 'test_helper'
 
 class MovimientosComponentesControllerTest < ActionController::TestCase
   setup do
-    @movimientos_componente = movimientos_componentes(:one)
+    @movimiento_componente = movimientos_componentes(:one)
   end
 
   test "should get index" do
@@ -16,32 +16,32 @@ class MovimientosComponentesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should create movimientos_componente" do
-    assert_difference('MovimientosComponente.count') do
-      post :create, movimientos_componente: { cantidad_transferida: @movimientos_componente.cantidad_transferida, fecha: @movimientos_componente.fecha }
+  test "should create movimiento_componente" do
+    assert_difference('MovimientoComponente.count') do
+      post :create, movimiento_componente: { cantidad_transferida: @movimiento_componente.cantidad_transferida, componente_id: @movimiento_componente.componente_id, deposito_id: @movimiento_componente.deposito_id, fecha: @movimiento_componente.fecha, tipo_de_movimiento_id: @movimiento_componente.tipo_de_movimiento_id }
     end
 
-    assert_redirected_to movimientos_componente_path(assigns(:movimientos_componente))
+    assert_redirected_to movimiento_componente_path(assigns(:movimiento_componente))
   end
 
-  test "should show movimientos_componente" do
-    get :show, id: @movimientos_componente
+  test "should show movimiento_componente" do
+    get :show, id: @movimiento_componente
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, id: @movimientos_componente
+    get :edit, id: @movimiento_componente
     assert_response :success
   end
 
-  test "should update movimientos_componente" do
-    patch :update, id: @movimientos_componente, movimientos_componente: { cantidad_transferida: @movimientos_componente.cantidad_transferida, fecha: @movimientos_componente.fecha }
-    assert_redirected_to movimientos_componente_path(assigns(:movimientos_componente))
+  test "should update movimiento_componente" do
+    patch :update, id: @movimiento_componente, movimiento_componente: { cantidad_transferida: @movimiento_componente.cantidad_transferida, componente_id: @movimiento_componente.componente_id, deposito_id: @movimiento_componente.deposito_id, fecha: @movimiento_componente.fecha, tipo_de_movimiento_id: @movimiento_componente.tipo_de_movimiento_id }
+    assert_redirected_to movimiento_componente_path(assigns(:movimiento_componente))
   end
 
-  test "should destroy movimientos_componente" do
-    assert_difference('MovimientosComponente.count', -1) do
-      delete :destroy, id: @movimientos_componente
+  test "should destroy movimiento_componente" do
+    assert_difference('MovimientoComponente.count', -1) do
+      delete :destroy, id: @movimiento_componente
     end
 
     assert_redirected_to movimientos_componentes_path

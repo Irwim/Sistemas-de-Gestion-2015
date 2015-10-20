@@ -1,0 +1,33 @@
+<%= form_for(@solicitud_monitor_teclado) do |f| %>
+  <% if @solicitud_monitor_teclado.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@solicitud_monitor_teclado.errors.count, "error") %> prohibited this solicitud_monitor_teclado from being saved:</h2>
+
+      <ul>
+      <% @solicitud_monitor_teclado.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :deposito_id %><br>
+    <%= f.text_field :deposito_id %>
+  </div>
+  <div class="field">
+    <%= f.label :deposito_id %><br>
+    <%= f.text_field :deposito_id %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha %><br>
+    <%= f.date_select :fecha %>
+  </div>
+  <div class="field">
+    <%= f.label :nro_formulario %><br>
+    <%= f.number_field :nro_formulario %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

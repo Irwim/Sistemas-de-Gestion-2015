@@ -1,47 +1,47 @@
 class ProductosTerminadosController < ApplicationController
-  before_action :set_productos_terminado, only: [:show, :edit, :update, :destroy]
+  before_action :set_producto_terminado, only: [:show, :edit, :update, :destroy]
 
   respond_to :html
 
   def index
-    @productos_terminados = ProductosTerminado.all
+    @productos_terminados = ProductoTerminado.all
     respond_with(@productos_terminados)
   end
 
   def show
-    respond_with(@productos_terminado)
+    respond_with(@producto_terminado)
   end
 
   def new
-    @productos_terminado = ProductosTerminado.new
-    respond_with(@productos_terminado)
+    @producto_terminado = ProductoTerminado.new
+    respond_with(@producto_terminado)
   end
 
   def edit
   end
 
   def create
-    @productos_terminado = ProductosTerminado.new(productos_terminado_params)
-    @productos_terminado.save
-    respond_with(@productos_terminado)
+    @producto_terminado = ProductoTerminado.new(producto_terminado_params)
+    @producto_terminado.save
+    respond_with(@producto_terminado)
   end
 
   def update
-    @productos_terminado.update(productos_terminado_params)
-    respond_with(@productos_terminado)
+    @producto_terminado.update(producto_terminado_params)
+    respond_with(@producto_terminado)
   end
 
   def destroy
-    @productos_terminado.destroy
-    respond_with(@productos_terminado)
+    @producto_terminado.destroy
+    respond_with(@producto_terminado)
   end
 
   private
-    def set_productos_terminado
-      @productos_terminado = ProductosTerminado.find(params[:id])
+    def set_producto_terminado
+      @producto_terminado = ProductoTerminado.find(params[:id])
     end
 
-    def productos_terminado_params
-      params.require(:productos_terminado).permit(:nombre, :codigo, :descripcion, :cantidad_minima)
+    def producto_terminado_params
+      params.require(:producto_terminado).permit(:modelo_id, :categoria_producto_id, :codigo, :cantidad_minima, :descripcion)
     end
 end
